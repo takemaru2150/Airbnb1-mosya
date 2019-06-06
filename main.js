@@ -5,6 +5,7 @@
 // })
 
 
-$("#myAlert").on('click',function(){
-  $("#myAlert").alert();
+$("#aaa").on('click',function(){
+  alert("クリックされました");
+  // $("#myAlert").alert();
 });
