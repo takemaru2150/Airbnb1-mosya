@@ -1,3 +1,5 @@
-Airbnb/index.html“™‚Íyarn“±“ü‘O‚Ìƒtƒ@ƒCƒ‹‚½‚¿B
+Airbnbã®ã‚µã‚¤ãƒˆã®æ¨¡å†™ã§ã™ã€‚https://www.airbnb.jp/gift
 
-Airbnb/dist“à‚Ìƒtƒ@ƒCƒ‹‚½‚¿‚ªyarn“±“üŒã‚Ìƒtƒ@ƒCƒ‹‚½‚¿B
+Airbnb/index.htmlç­‰ã¯yarnå°å…¥å‰ã®ãƒ•ã‚¡ã‚¤ãƒ«ãŸã¡ã€‚
+
+Airbnb/distå†…ã®ãƒ•ã‚¡ã‚¤ãƒ«ãŸã¡ãŒyarnå°å…¥å¾Œã®ãƒ•ã‚¡ã‚¤ãƒ«ãŸã¡ã€‚
