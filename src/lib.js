@@ -1,15 +1,15 @@
 import $ from 'jquery';
-// var alertBtn = document.getElementById('alertbtn');
-//
-// alertBtn.addEventListener('click', function() {
-//   $('#.alert').alert('close')
-// })
 
-
-$("#myAlert").on('click',function(){
-  $("#myAlert").alert();
+// ×ボタンを押したときにアラートを非表示用
+$("#btnAlert").on('click',function(){
+  $("#header_alert").css('display','none');
 });
 
-// $("#btnAlert").on('click',function(){
-//   $("#header_alert").css('display','none');
-// });
+// ハンバーガーメニュー用
+$(function(){
+    $('.nav-trigger').on('click', function() {
+        $(this).toggleClass('_active');
+        $('.gnav').toggleClass('_active');
+        $('.header_outer').toggleClass('_active');
+    })
+})

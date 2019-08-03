@@ -28,42 +28,192 @@ $tab: 744px;
 // ----- header -----
 
 
-header {
+.header {
   width: 100%;
   height: 80px;
   top: 0;
   left: 0;
-  z-index: 3;
+  z-index: 5;
   background-color: #fff;
   border-bottom: 1px solid $border-bottom-color;
-  // position: fixed;
+  position: relative;
 
   @include tab {
   }
+.header_outer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  &._active {
+    position: fixed;
+  }
 
   .header_inner {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
 
     .header_logo {
-      display: inline;
-      .fa-airbnb {
-        color: red;
+      display: block;
+      z-index: 15;
+      a {
+        i {
+          font-size: 34px;
+          padding: 0 24px;
+          color: red;
+        }
+      }
+    }
+
+    .nav-trigger {
+      @include pc {
+        display: none;
+      }
+      display: inline-block;
+      transition: all .4s;
+      position: absolute;
+      width: 9px;
+      height: 33px;
+      left: 62px;
+      top: 28px;
+      z-index:15;
+
+      span {
+        display: inline-block;
+        transition: all .4s;
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        height: 1px;
+        border-radius: 4px;
+        background-color: #484848;
+        &:nth-of-type(1) {
+          left: 6.2px;
+          -webkit-transform: translateY(0px) rotate(-45deg);
+          transform: translateY(0px) rotate(-45deg);
+        }
+        &:nth-of-type(2) {
+          left: 0;
+          -webkit-transform: translateX(0.3px) rotate(45deg);
+          transform: translateX(0.3px) rotate(45deg);
+        }
+      }
+
+      &._active {
+        span {
+          &:nth-of-type(1) {
+            -webkit-transform: translateX(-6px) rotate(130deg);
+            transform: translateX(-6px) rotate(130deg);
+          }
+          &:nth-of-type(2) {
+            -webkit-transform: translateX(5.3px) rotate(225deg);
+            transform: translateX(5.3px) rotate(225deg);
+          }
+        }
       }
     }
 
     .header_searchBox {
-      display: inline;
+      display: block;
+      height: 48px;
+      margin: auto 0;
+      box-shadow: 0px 3px 9px rgba(0,0,0,0.2);
+      border-radius: 5px;
+      margin-right: 30px;
+      margin-left: 15px;
+
+      i {
+        font-size: 18px;
+        margin: 0 1rem;
+        color: #484848;
+      }
 
       input {
-
+        font-family: Circular,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","MS Gothic","ＭＳ ゴシック","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+        padding: 13px 0;
+        border: 0;
+        margin: 0;
+        outline: 0;
+        font-weight: 800;
+        height: 48px;
+        width: 70%;
+        transition: all .3s ease;
+        &:focus {
+          width: 80%;
+        }
+        @include tab {
+          width: 400px;
+          &:focus {
+            width: 500px;
+          }
+        }
       }
     }
+  }// /.header_inner
+  
+  .header_nav {
+    display: none;
+    @include pc {
+      display: block;
+    }
+    .header_list {
+      display: flex;
 
-    .header_nav {
-      .header_list {
-
+      .header_item {
+        padding: 0 1rem;
+        margin: auto 0;
+        a {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color: #484848;
+        }
       }
     }
   }
+}// /.header_outer
+
+.gnav {
+  background-color: #fff;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+  transition: all .5s 0s ease;
+  display: block;
+  z-index: 10;
+  padding: 1rem;
+  overflow: scroll;
+  
+  &._active {
+      top: 80px;
+      transform: translateY(0%);
+  }
+
+  @include pc {
+    display: none;
+    // background-color: #fff;
+  }
+  .gnav_list {
+    .gnav_item {
+      margin-bottom: 2rem;
+      &:last-child {
+        margin-bottom: 100px;
+      }
+      a {
+        font-size: 1rem;
+        color: #484848;
+      }
+
+      hr {
+        color: rgb(235, 235, 235);
+      }
+    }
+  }
+}
 
   #header_alert {
     position: fixed;
@@ -72,11 +222,15 @@ header {
     display: -ms-flex;
     display: flex;
     z-index: 5;
+    width: 100vw;
 
     .fa-comment-dots {
       color: #4cb0bb;
       font-size: 34px;
       margin-right: 10px;
+      @include pc {
+        margin-left: 180px;
+      }
     }
 
     #alert_message {
