@@ -223,20 +223,19 @@ $tab: 744px;
     display: flex;
     z-index: 5;
     width: 100vw;
+    align-items: center;
 
     .fa-comment-dots {
       color: #4cb0bb;
       font-size: 34px;
       margin-right: 10px;
       @include pc {
-        margin-left: 180px;
+        // margin-left: 180px;
       }
     }
 
     #alert_message {
       font-size: 14px;
-      vertical-align: super;
-
     }
   }
 }
@@ -256,7 +255,7 @@ $tab: 744px;
     position: relative;
 
     .top_img {
-      background-image: url(../img/BackgroundHomeSummer.jpg);
+      background-image: url(./img/BackgroundHomeSummer.jpg);
       width: 100%;
       height: 400px;
       -webkit-background-size: cover;
