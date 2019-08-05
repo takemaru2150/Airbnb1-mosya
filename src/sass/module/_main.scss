@@ -124,6 +124,7 @@ $tab: 744px;
       margin-right: 30px;
       margin-left: 15px;
       align-items: center;
+      width: 100%;
 
       i {
         font-size: 18px;
@@ -139,11 +140,9 @@ $tab: 744px;
         outline: 0;
         font-weight: 800;
         height: 48px;
-        width: 75vw;
+        width: 100%;
         transition: all .3s ease;
-        &:focus {
-          width: 80%;
-        }
+
         @include tab {
           width: 458px;
           &:focus {
