@@ -156,18 +156,27 @@ $tab: 744px;
   .header_nav {
     display: none;
     @include pc {
-      display: block;
+      display: flex;
+      height: 78px;
     }
     .header_list {
       display: flex;
 
       .header_item {
         padding: 0 1rem;
-        margin: auto 0;
+        display: flex;
+
         a {
           font-size: 0.9rem;
           font-weight: 600;
           color: #484848;
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            border-bottom: solid 2px #484848;
+            text-decoration: none;
+          }
         }
       }
     }
@@ -218,24 +227,37 @@ $tab: 744px;
   #header_alert {
     position: fixed;
     padding: 0.5rem 2rem 0.5rem 0.5rem;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
+
     z-index: 5;
     width: 100vw;
-    align-items: center;
+    
+    .alert_inner {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: row;
+      
+      .fa-comment-dots {
+        color: #4cb0bb;
+        font-size: 34px;
+        margin-right: 10px;
+        @include pc {
 
-    .fa-comment-dots {
-      color: #4cb0bb;
-      font-size: 34px;
-      margin-right: 10px;
-      @include pc {
-        // margin-left: 180px;
+        }
+      }
+  
+      #alert_message {
+        font-size: 14px;
       }
     }
 
-    #alert_message {
-      font-size: 14px;
+    #btnAlert {
+      padding: 0;
+      position: absolute;
+      top: 7px;
+      right: 15px;
     }
   }
 }
@@ -268,47 +290,53 @@ $tab: 744px;
     }
 
     .topParts_wrapper {
-      position: absolute;
-      top: 49%;
-      left: 3%;
-      -ms-transform: translate(0%,-50%);
-      -webkit-transform: translate(0%,-50%);
-      transform: translate(0%,-50%);
+      margin: 0 auto;
+      padding: 0 12px;
+      width: auto;
 
       @include tab {
-        left: 8%;
+        width: 696px;
+        padding: 0 24px;
       }
 
       @include pc {
-        left: 9%;
+        width: 1080px;
       }
 
-      .top_ttl {
-        font-size: $title-h2-fontSize-sp;
-        color: #fff;
-        font-weight: bold;
-        margin-bottom: 1.5rem;
-        opacity: 0.9;
+      .topParts_inner {
+        position: absolute;
+        top: 49%;
+        -ms-transform: translate(0%,-50%);
+        -webkit-transform: translate(0%,-50%);
+        transform: translate(0%,-50%);
 
-        @include tab {
-          font-size: $title-h2-fontSize-tab;
+        .top_ttl {
+          font-size: $title-h2-fontSize-sp;
+          color: #fff;
+          font-weight: bold;
+          margin-bottom: 1.5rem;
+          opacity: 0.9;
+
+          @include tab {
+            font-size: $title-h2-fontSize-tab;
+          }
         }
-      }
 
-      .top_copy {
-        font-size: $copy-fontSize;
-        color: #fff;
-        margin-bottom: 2.4rem;
-        opacity: 0.9;
-      }
+        .top_copy {
+          font-size: $copy-fontSize;
+          color: #fff;
+          margin-bottom: 2.4rem;
+          opacity: 0.9;
+        }
 
-      .giftCard_button {
-        background-color: #fff;
-        padding: 13px 20px;
-        color: $base-color;
-        font-weight: bold;
-        border-radius: 4px;
-        text-decoration: none
+        .giftCard_button {
+          background-color: #fff;
+          padding: 13px 20px;
+          color: $base-color;
+          font-weight: bold;
+          border-radius: 4px;
+          text-decoration: none
+        }
       }
     }
   }
@@ -318,7 +346,18 @@ $tab: 744px;
 
   .giftDescription_container {
     background-color: #fff;
-    padding-top: 40px;
+    width: auto;
+    padding: 40px 12px 0;
+    margin: 0 auto;
+
+    @include tab {
+      width: 696px;
+      padding: 40px 24px 0;
+    }
+
+    @include pc {
+      width: 1080px;
+    }
 
     .giftDescription_ttl {
       font-size: 1.8rem;
@@ -400,9 +439,18 @@ $tab: 744px;
     background-color: #007A87;
 
     .giftCard_wrapper {
-      padding: 40px 0;
       margin: 0 auto;
-      width: 90%;
+      width: auto;
+      padding: 40px 12px;
+
+      @include tab {
+        width: 696px;
+        padding: 40px 24px;
+      }
+
+      @include pc {
+        width: 1080px;
+      }
 
       .presentIcon {
         margin: 0 auto;

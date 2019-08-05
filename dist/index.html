@@ -82,18 +82,13 @@
 
     <!-- アラート -->
     <div class="alert alert-info text-center mb-0 rounded-0 alert-dismissible fade show" id="header_alert">
-      <i class="far fa-comment-dots"></i><span id="alert_message">今のところ、ギフトカードはアメリカ居住者のみご購入いただけます。アメリカにお住いの場合は、アカウントの設定から居住国を更新してください。</span>
+      <div class="alert_inner">
+        <i class="far fa-comment-dots"></i><span id="alert_message">今のところ、ギフトカードはアメリカ居住者のみご購入いただけます。アメリカにお住いの場合は、アカウントの設定から居住国を更新してください。</span>
+      </div>
       <button id="btnAlert" class="close" data-dismiss="alert">
         &times;
       </button>
     </div>
-
-    <!-- <div id="divAlert" style="position:fixed; z-index:5" class="alert alert-warning alert-dismissible fade show" role="alert">
-      <strong>注意!</strong>　このアラートはあなたの注意が必要です。
-      <button id="btnAlert" type="button" class="close" data-dismiss="alert" aria-label="閉じる">
-        <span aria-hidden="true">&times;</span>
-      </button>
-    </div> -->
   </header>
 
   <!-- ーーーmainーーー -->
@@ -102,9 +97,11 @@
     <section class="top_container">
       <div class="top_img"></div>
       <div class="topParts_wrapper">
-        <h2 class="top_ttl">旅を贈ろう。</h2>
-        <p class="top_copy">Airbnbギフトカードで、世界をぐんと身近に</p>
-        <a href="" class="giftCard_button">ギフトカードを登録</a>
+        <div class="topParts_inner">
+          <h2 class="top_ttl">旅を贈ろう。</h2>
+          <p class="top_copy">Airbnbギフトカードで、世界をぐんと身近に</p>
+          <a href="" class="giftCard_button">ギフトカードを登録</a>
+        </div>
       </div>
     </section>
 
