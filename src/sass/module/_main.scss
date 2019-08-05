@@ -530,14 +530,19 @@ $tab: 744px;
 // ----- footer -----
 
 
-footer {
-  width: 90%;
+.footer {
+  width: auto;
   margin: 0 auto;
   font-family: Circular;
   font-weight: bold;
+  padding: 24px;
+
+  @include tab {
+    padding: 0 24px;
+  }
 
   @include pc {
-    width: 85%;
+    width: 1080px;
   }
 
   // --- info_container ---
@@ -609,7 +614,6 @@ footer {
     display: -ms-flex;
     display: flex;
     justify-content: space-between;
-    padding: 20px 0 40px;
 
     .license_wrapper {
       display: -webkit-flex;
