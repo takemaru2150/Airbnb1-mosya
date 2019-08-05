@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>現地の人から借りる家、体験＆スポット - Airbnb</title>
+
+  <link rel="shortcut icon" href="favicon.ico" >
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+  <header class="header">
+      <!-- header_outer -->
+    <div class="header_outer">
+      <!-- header_inner -->
+      <div class="header_inner">
+
+        <!-- Airbnb ロゴ -->
+        <h1 class="header_logo">
+          <a href="#top">
+            <i class="fab fa-airbnb"></i>
+          </a>
+        </h1>
+
+        <!-- ハンバーガーメニュー -->
+        <a class="nav-trigger" id="js-toggle_menu">
+          <span></span>
+          <span></span>
+        </a>
+
+        <!-- 検索ボックス -->
+        <div class="header_searchBox">
+          <i class="fas fa-search"></i>
+          <input type="text" name="searchBox" placeholder="探す">
+        </div>
+      </div><!-- /header_inner -->
+
+      <!-- ナビ -->
+      <nav class="header_nav">
+        <ul class="header_list">
+          <li class="header_item"><a href="">ホストをはじめる</a></li>
+          <li class="header_item"><a href="">ヘルプ</a></li>
+          <li class="header_item"><a href="">登録する</a></li>
+          <li class="header_item"><a href="">ログイン</a></li>
+        </ul>
+      </nav>
+    </div><!-- /header_outer -->
+
+    <!-- ハンバーガーメニュー -->
+    <nav class="gnav">
+      <ul class="gnav_list">
+        <li class="gnav_item"><a href="">ホーム</a></li>
+        <li class="gnav_item"><hr></li>
+        <li class="gnav_item"><a href="">アプリをダウンロード</a></li>
+        <li class="gnav_item"><a href="">友達を招待する</a></li>
+        <li class="gnav_item"><a href="">Refer hosts</a></li>
+        <li class="gnav_item"><a href="">Airbnbビジネスプログラム</a></li>
+        <li class="gnav_item"><hr></li>
+        <li class="gnav_item"><a href="">お部屋を掲載
+          <span><strong>月あたり最大￥209,521</strong>の収益</span>
+        </a></li>
+        <li class="gnav_item"><a href="">お部屋のホスティングについて</a></li>
+        <li class="gnav_item"><a href="">体験をホストする
+          <span>好きを仕事に</span>
+        </a></li>
+        <li class="gnav_item"><hr></li>
+        <li class="gnav_item"><a href="">ヘルプ</a></li>
+        <li class="gnav_item"><a href="">登録する</a></li>
+        <li class="gnav_item"><a href="">ログイン</a></li>
+      </ul>
+    </nav>
+
+    <!-- アラート -->
+    <div class="alert alert-info text-center mb-0 rounded-0 alert-dismissible fade show" id="header_alert">
+      <div class="alert_inner">
+        <i class="far fa-comment-dots"></i><span id="alert_message">今のところ、ギフトカードはアメリカ居住者のみご購入いただけます。アメリカにお住いの場合は、アカウントの設定から居住国を更新してください。</span>
+      </div>
+      <button id="btnAlert" class="close" data-dismiss="alert">
+        &times;
+      </button>
+    </div>
+  </header>
+
+  <!-- ーーーmainーーー -->
+  <main class="main_container">
+    <!-- top_container -->
+    <section class="top_container">
+      <div class="top_img"></div>
+      <div class="topParts_wrapper">
+        <div class="topParts_inner">
+          <h2 class="top_ttl">旅を贈ろう。</h2>
+          <p class="top_copy">Airbnbギフトカードで、世界をぐんと身近に</p>
+          <a href="" class="giftCard_button">ギフトカードを登録</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- giftDescription_container -->
+    <section class="giftDescription_container">
+      <h2 class="giftDescription_ttl">いつも完璧な贈りもの</h2>
+      <div class="giftDescription_wrapper">
+
+        <div class="giftDescription_wrap">
+          <i class="far fa-envelope"></i>
+          <h3 class="giftDescription_ttl">簡単に使える</h3>
+          <p class="giftDescription_copy">ギフトカードはメールで届きます。Airbnbアカウントへのギフト登録も超かんたん。</p>
+        </div>
+
+        <div class="giftDescription_wrap">
+          <i class="fas fa-stopwatch"></i>
+          <h3 class="giftDescription_ttl">有効期限なし</h3>
+          <p class="giftDescription_copy">Airbnbギフトカードは無期限。だから友達も時間をかけて旅をプランできます。</p>
+        </div>
+
+        <div class="giftDescription_wrap">
+          <i class="fas fa-globe"></i>
+          <h3 class="giftDescription_ttl">忘れられない旅</h3>
+          <p class="giftDescription_copy">お家は100万件以上あるので、ずっと住みたいと憧れていた街の暮らしも叶います。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- giftCard_container -->
+    <section class="giftCard_container">
+      <div class="giftCard_wrapper">
+        <img src="img/PresentIcon.png" alt="presentbox" class="presentIcon">
+        <h2 class="giftCard_ttl">ギフトカードをもらったら...</h2>
+        <p class="giftCard_copy">ログインあるいは利用登録してギフトを登録するだけです。あとは使い途をゆっくり考えましょう。</p>
+        <div class="giftCard_button_wrap"><a href="" class="giftCard_button">ギフトカードを登録する</a></div>
+        <a href="" class="giftCard_messasge">Airbnbギフトカードの仕組みは?</a>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- footer -->
+  <footer class="footer">
+
+    <!-- info_container -->
+    <section class="info_container">
+      <div class="airbnbInfoWrap info_contents">
+        <h4 class="airbnbInfo_ttl info_ttl">Airbnb</h4>
+        <ul class="airbnbInfo_list info_list">
+          <li class="airbnbInfo_item info_item"><a href="">採用情報</a></li>
+          <li class="airbnbInfo_item info_item"><a href="">プレス</a></li>
+          <li class="airbnbInfo_item info_item"><a href="">ポリシー</a></li>
+          <li class="airbnbInfo_item info_item"><a href="">ヘルプ</a></li>
+          <li class="airbnbInfo_item info_item"><a href="">ダイバーシティ&ビロンギング</a></li>
+          <li class="airbnbInfo_item info_item"><a href="">アクセシビリティ対応</a><span>新着</span></li>
+          <li class="airbnbInfo_item info_item"><a href="">企業情報</a></li>
+        </ul>
+      </div>
+
+      <div class="stuffInfoWrap info_contents">
+        <h4 class="stuffInfo_ttl info_ttl">スタッフのおすすめ</h4>
+        <ul class="stuffInfo_list info_list">
+          <li class="stuffInfo_item info_item"><a href="">信頼＆安全</a></li>
+          <li class="stuffInfo_item info_item"><a href="">お友達紹介クーポン</a></li>
+          <li class="stuffInfo_item info_item"><a href="">Airbnb Citizen</a></li>
+          <li class="stuffInfo_item info_item"><a href="">出張</a></li>
+          <li class="stuffInfo_item info_item"><a href="">ガイドブック</a></li>
+          <li class="stuffInfo_item info_item"><a href="">Airbnbmag</a></li>
+        </ul>
+      </div>
+
+      <div class="hostingInfoWap info_contents">
+        <h4 class="stuffInfo_ttl info_ttl">ホスティング</h4>
+        <ul class="stuffInfo_list info_list">
+          <li class="stuffInfo_item info_item"><a href="">ホストになる理由</a></li>
+          <li class="stuffInfo_item info_item"><a href="">おもてなしの心</a></li>
+          <li class="stuffInfo_item info_item"><a href="">ホストの責任</a></li>
+          <li class="stuffInfo_item info_item"><a href="">コミュニティセンター</a></li>
+          <li class="stuffInfo_item info_item"><a href="">体験を掲載</a><span>新着</span></li>
+          <li class="stuffInfo_item info_item"><a href="">オープンホーム</a></li>
+        </ul>
+      </div>
+
+      <div class="snsInfoWrap info_contents">
+        <div class="snsInfoIcon_wrap">
+          <a href="https://www.facebook.com/AirbnbJapan" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/airbnb_jp" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/airbnb/" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+        <ul class="stuffInfo_list info_list">
+          <li class="stuffInfo_item info_item"><a href="">利用規約</a></li>
+          <li class="stuffInfo_item info_item"><a href="">プライバシー</a></li>
+          <li class="stuffInfo_item info_item"><a href="">サイトマップ</a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- license_container -->
+    <section class="license_container">
+      <div class="license_wrapper">
+        <div class="AirbnbIcon_wrap">
+          <i class="fab fa-airbnb" id="AirbnbIcon_footer"></i>
+        </div>
+        <div class="licenseSentence_wrap">
+          <a href="https://www.airbnb.jp/about/company-details" target="_blank" class="license_anchor">Airbnb Global Services Limited
+            <br>
+            観光庁長官(01)第S0001号(2018年6月15日-2023年6月14日)
+          </a>
+          <p class="license_copy">&copy; 2019 Airbnb,Inc. All right reserved.</p>
+        </div>
+      </div>
+      <div class="footer_button">
+        <a href="" class="japanese_button">日本語</a>
+        <a href="" class="JPY_button">JPY - ￥</a>
+      </div>
+    </section>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
