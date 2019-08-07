@@ -242,13 +242,11 @@ $tab: 744px;
         color: #4cb0bb;
         font-size: 34px;
         margin-right: 10px;
-        @include pc {
-
-        }
       }
   
       #alert_message {
         font-size: 14px;
+        padding-right: 20px;
       }
     }
 
