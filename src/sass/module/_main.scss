@@ -627,14 +627,21 @@ $tab: 744px;
       }
 
       .licenseSentence_wrap {
-        .license_anchor {
+        a {
           color: $footer-color;
-          font-size: 0.8rem;
+          font-size: 14px;
+
+          .license_text1 , .license_text2{
+            line-height: 130%;
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+          }
         }
 
         .license_copy {
           color: $footer-color;
-          font-size: 0.8rem;
+          font-size: 14px;
+          line-height: 130%;
+          font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
         }
       }
     }
