@@ -11,5 +11,6 @@ $(function(){
         $(this).toggleClass('_active');
         $('.gnav').toggleClass('_active');
         $('.header_outer').toggleClass('_active');
+        $('.header_searchBox').toggleClass('_active');
     })
 })
