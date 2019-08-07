@@ -74,7 +74,7 @@ $tab: 744px;
         display: none;
       }
       display: inline-block;
-      transition: all .4s;
+      transition: all .3s;
       position: absolute;
       width: 9px;
       height: 33px;
@@ -246,7 +246,7 @@ $tab: 744px;
   
       #alert_message {
         font-size: 14px;
-        padding-right: 20px;
+        padding-right: 10px;
       }
     }
 
@@ -254,7 +254,7 @@ $tab: 744px;
       padding: 0;
       position: absolute;
       top: 12px;
-      right: 29px;
+      right: 15px;
     }
   }
 }
