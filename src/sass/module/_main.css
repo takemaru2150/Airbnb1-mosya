@@ -1,0 +1,651 @@
+@charset "UTF-8";
+.header {
+  width: 100%;
+  height: 80px;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header .header_outer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  z-index: 15;
+  position: relative;
+}
+
+.header .header_outer._active {
+  position: fixed;
+  z-index: 15;
+}
+
+.header .header_outer .header_inner {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+}
+
+.header .header_outer .header_inner .header_logo {
+  display: block;
+  background-color: #fff;
+}
+
+.header .header_outer .header_inner .header_logo a i {
+  font-size: 34px;
+  padding: 0 24px;
+  color: red;
+}
+
+.header .header_outer .header_inner .nav-trigger {
+  display: inline-block;
+  transition: all .3s;
+  position: absolute;
+  width: 9px;
+  height: 33px;
+  left: 62px;
+  top: 28px;
+}
+
+@media (min-width: 1128px) {
+  .header .header_outer .header_inner .nav-trigger {
+    display: none;
+  }
+}
+
+.header .header_outer .header_inner .nav-trigger._active {
+  transform: translateX(6.2px) translateY(-12.4px) rotate(180deg);
+}
+
+.header .header_outer .header_inner .nav-trigger span {
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  top: 10px;
+  width: 100%;
+  height: 1px;
+  border-radius: 4px;
+  background-color: #484848;
+}
+
+.header .header_outer .header_inner .nav-trigger span:nth-of-type(1) {
+  left: 6.2px;
+  -webkit-transform: translateY(0px) rotate(-45deg);
+  transform: translateY(0px) rotate(-45deg);
+}
+
+.header .header_outer .header_inner .nav-trigger span:nth-of-type(2) {
+  left: 0;
+  -webkit-transform: translateX(0.3px) rotate(45deg);
+  transform: translateX(0.3px) rotate(45deg);
+}
+
+.header .header_outer .header_inner .header_searchBox {
+  display: flex;
+  height: 48px;
+  margin: auto 0;
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-right: 30px;
+  margin-left: 15px;
+  align-items: center;
+  width: 100%;
+}
+
+.header .header_outer .header_inner .header_searchBox._active {
+  visibility: hidden;
+}
+
+.header .header_outer .header_inner .header_searchBox i {
+  font-size: 18px;
+  margin: 0 1rem;
+  color: #484848;
+}
+
+.header .header_outer .header_inner .header_searchBox input {
+  font-family: Circular,"ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","メイリオ",Meiryo,Osaka,"ＭＳ Ｐゴシック","MS PGothic","MS Gothic","ＭＳ ゴシック","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+  padding: 13px 0;
+  border: 0;
+  margin: 0;
+  outline: 0;
+  font-weight: 800;
+  height: 48px;
+  width: 100%;
+  transition: all .3s ease;
+}
+
+@media (min-width: 744px) {
+  .header .header_outer .header_inner .header_searchBox input {
+    width: 458px;
+  }
+  .header .header_outer .header_inner .header_searchBox input:focus {
+    width: 560px;
+  }
+}
+
+.header .header_outer .header_nav {
+  display: none;
+}
+
+@media (min-width: 1128px) {
+  .header .header_outer .header_nav {
+    display: flex;
+    height: 78px;
+  }
+}
+
+.header .header_outer .header_nav .header_list {
+  display: flex;
+}
+
+.header .header_outer .header_nav .header_list .header_item {
+  padding: 0 1rem;
+  display: flex;
+}
+
+.header .header_outer .header_nav .header_list .header_item a {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #484848;
+  display: flex;
+  align-items: center;
+  height: calc(100% - 2px);
+}
+
+.header .header_outer .header_nav .header_list .header_item a:hover {
+  border-bottom: solid 2px #484848;
+  text-decoration: none;
+  height: 100%;
+}
+
+.header .gnav {
+  background-color: #fff;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform: translateY(-90%);
+  transition: all .3s 0s ease;
+  display: block;
+  z-index: -5;
+  padding: 1rem;
+  padding-top: 96px;
+  overflow: scroll;
+}
+
+.header .gnav._active {
+  transform: translateY(0%);
+  z-index: 10;
+}
+
+@media (min-width: 1128px) {
+  .header .gnav {
+    display: none;
+  }
+}
+
+.header .gnav .gnav_list .gnav_item {
+  margin-bottom: 2rem;
+}
+
+.header .gnav .gnav_list .gnav_item:last-child {
+  margin-bottom: 100px;
+}
+
+.header .gnav .gnav_list .gnav_item a {
+  font-size: 1rem;
+  color: #484848;
+}
+
+.header .gnav .gnav_list .gnav_item hr {
+  color: #ebebeb;
+}
+
+.header #header_alert {
+  position: fixed;
+  padding: 0.5rem 2rem 0.5rem 0.5rem;
+  z-index: 13;
+  width: 100vw;
+  top: 80px;
+}
+
+.header #header_alert .alert_inner {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.header #header_alert .alert_inner .fa-comment-dots {
+  color: #4cb0bb;
+  font-size: 34px;
+  margin-right: 10px;
+}
+
+.header #header_alert .alert_inner #alert_message {
+  font-size: 14px;
+  padding-right: 10px;
+}
+
+.header #header_alert #btnAlert {
+  padding: 0;
+  position: absolute;
+  top: 12px;
+  right: 15px;
+}
+
+.main_container .top_container {
+  position: relative;
+}
+
+.main_container .top_container .top_img {
+  background-image: url(./img/BackgroundHomeSummer.jpg);
+  width: 100%;
+  height: 400px;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: bottom;
+}
+
+@media (min-width: 744px) {
+  .main_container .top_container .top_img {
+    height: 600px;
+  }
+}
+
+.main_container .top_container .topParts_wrapper {
+  margin: 0 auto;
+  padding: 0 12px;
+  width: auto;
+}
+
+@media (min-width: 744px) {
+  .main_container .top_container .topParts_wrapper {
+    width: 696px;
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1128px) {
+  .main_container .top_container .topParts_wrapper {
+    width: 1080px;
+  }
+}
+
+.main_container .top_container .topParts_wrapper .topParts_inner {
+  position: absolute;
+  top: 49%;
+  -ms-transform: translate(0%, -50%);
+  -webkit-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+
+.main_container .top_container .topParts_wrapper .topParts_inner .top_ttl {
+  font-size: 2.4rem;
+  color: #fff;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+@media (min-width: 744px) {
+  .main_container .top_container .topParts_wrapper .topParts_inner .top_ttl {
+    font-size: 2.8rem;
+  }
+}
+
+.main_container .top_container .topParts_wrapper .topParts_inner .top_copy {
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 2.4rem;
+  opacity: 0.9;
+}
+
+.main_container .top_container .topParts_wrapper .topParts_inner .giftCard_button {
+  background-color: #fff;
+  padding: 13px 20px;
+  color: #333;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.main_container .giftDescription_container {
+  background-color: #fff;
+  width: auto;
+  padding: 40px 12px 0;
+  margin: 0 auto;
+}
+
+@media (min-width: 744px) {
+  .main_container .giftDescription_container {
+    width: 696px;
+    padding: 40px 24px 0;
+  }
+}
+
+@media (min-width: 1128px) {
+  .main_container .giftDescription_container {
+    width: 1080px;
+  }
+}
+
+.main_container .giftDescription_container .giftDescription_ttl {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+}
+
+.main_container .giftDescription_container .giftDescription_wrapper {
+  padding-top: 40px;
+}
+
+@media (min-width: 744px) {
+  .main_container .giftDescription_container .giftDescription_wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.main_container .giftDescription_container .giftDescription_wrapper .giftDescription_wrap {
+  padding-top: 20px 0;
+}
+
+@media (min-width: 744px) {
+  .main_container .giftDescription_container .giftDescription_wrapper .giftDescription_wrap {
+    width: 30%;
+  }
+}
+
+.main_container .giftDescription_container .giftDescription_wrapper .giftDescription_wrap .fa-envelope {
+  color: #007a87;
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+.main_container .giftDescription_container .giftDescription_wrapper .giftDescription_wrap .fa-stopwatch {
+  color: #007a87;
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+.main_container .giftDescription_container .giftDescription_wrapper .giftDescription_wrap .fa-globe {
+  color: #007a87;
+  font-size: 60px;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+.main_container .giftDescription_container .giftDescription_wrapper .giftDescription_wrap .giftDescription_ttl {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+  opacity: 0.9;
+}
+
+.main_container .giftDescription_container .giftDescription_wrapper .giftDescription_wrap .giftDescription_copy {
+  font-size: 1rem;
+  color: #767676;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.main_container .giftCard_container {
+  background-color: #007A87;
+}
+
+.main_container .giftCard_container .giftCard_wrapper {
+  margin: 0 auto;
+  width: auto;
+  padding: 40px 12px;
+}
+
+@media (min-width: 744px) {
+  .main_container .giftCard_container .giftCard_wrapper {
+    width: 696px;
+    padding: 40px 24px;
+  }
+}
+
+@media (min-width: 1128px) {
+  .main_container .giftCard_container .giftCard_wrapper {
+    width: 1080px;
+  }
+}
+
+.main_container .giftCard_container .giftCard_wrapper .presentIcon {
+  margin: 0 auto;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.main_container .giftCard_container .giftCard_wrapper .giftCard_ttl {
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.main_container .giftCard_container .giftCard_wrapper .giftCard_copy {
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  padding-bottom: 50px;
+}
+
+.main_container .giftCard_container .giftCard_wrapper .giftCard_button_wrap {
+  background-color: #fff;
+  width: 100%;
+  border-radius: 4px;
+  margin: 0 auto;
+}
+
+@media (min-width: 744px) {
+  .main_container .giftCard_container .giftCard_wrapper .giftCard_button_wrap {
+    width: max-content;
+  }
+}
+
+.main_container .giftCard_container .giftCard_wrapper .giftCard_button_wrap .giftCard_button {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 4px;
+  display: block;
+  background-color: #FF5A5F;
+  text-decoration: none;
+}
+
+.main_container .giftCard_container .giftCard_wrapper .giftCard_button_wrap .giftCard_button:hover {
+  opacity: 0.8;
+}
+
+@media (min-width: 744px) {
+  .main_container .giftCard_container .giftCard_wrapper .giftCard_button_wrap .giftCard_button {
+    padding: 10px 25px;
+    margin: 0 auto;
+    width: max-content;
+  }
+}
+
+.main_container .giftCard_container .giftCard_wrapper .giftCard_messasge {
+  color: #fff;
+  font-size: 14px;
+  padding-top: 20px;
+  margin: 0 auto;
+  width: max-content;
+  display: block;
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+.main_container .giftCard_container .giftCard_wrapper .giftCard_messasge:hover {
+  opacity: 1;
+}
+
+.footer {
+  width: auto;
+  margin: 0 auto;
+  font-family: Circular;
+  font-weight: bold;
+  padding: 24px;
+}
+
+@media (min-width: 744px) {
+  .footer {
+    padding: 48px 24px;
+  }
+}
+
+@media (min-width: 1128px) {
+  .footer {
+    width: 1080px;
+  }
+}
+
+.footer .info_container {
+  display: none;
+  padding-bottom: 20px;
+  border-bottom: solid 1px #EBEBEB;
+}
+
+@media (min-width: 744px) {
+  .footer .info_container {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.footer .info_container .info_contents {
+  width: 16%;
+}
+
+.footer .info_container .info_contents .info_ttl {
+  color: #333;
+  font-size: 0.9rem;
+  font-weight: bold;
+  opacity: 0.9;
+  margin-bottom: 0.8rem;
+}
+
+.footer .info_container .info_contents .info_list .info_item {
+  font-size: 0.9rem;
+}
+
+.footer .info_container .info_contents .info_list .info_item a {
+  color: #666;
+  opacity: 0.9;
+}
+
+.footer .info_container .info_contents .info_list .info_item span {
+  color: #fff;
+  padding: 1px 5px;
+  background-color: #007a87;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  margin-left: 0.5rem;
+}
+
+.footer .info_container .info_contents .snsInfoIcon_wrap a {
+  color: #666;
+  opacity: 0.9;
+  padding-left: 0.8rem;
+  margin-bottom: 0.8rem;
+  display: inline-block;
+}
+
+.footer .license_container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.footer .license_container .license_wrapper {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+}
+
+.footer .license_container .license_wrapper .AirbnbIcon_wrap {
+  margin: auto 0;
+  padding-right: 10px;
+}
+
+.footer .license_container .license_wrapper .AirbnbIcon_wrap #AirbnbIcon_footer {
+  color: #666;
+  font-size: 22px;
+  font-weight: normal;
+}
+
+.footer .license_container .license_wrapper .licenseSentence_wrap a {
+  color: #666;
+  font-size: 14px;
+}
+
+.footer .license_container .license_wrapper .licenseSentence_wrap a .license_text1, .footer .license_container .license_wrapper .licenseSentence_wrap a .license_text2 {
+  line-height: 130%;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+.footer .license_container .license_wrapper .licenseSentence_wrap .license_copy {
+  color: #666;
+  font-size: 14px;
+  line-height: 130%;
+  font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif !important;
+}
+
+.footer .license_container .footer_button {
+  margin: auto 0;
+}
+
+.footer .license_container .footer_button .japanese_button {
+  color: #666;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border: 1px solid rgba(102, 102, 102, 0.1);
+  margin-right: 10px;
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.footer .license_container .footer_button .japanese_button:hover {
+  background: rgba(238, 238, 238, 0.6);
+}
+
+.footer .license_container .footer_button .JPY_button {
+  color: #666;
+  padding: 5px 10px;
+  border: 1px solid rgba(102, 102, 102, 0.1);
+  text-decoration: none;
+  font-size: 0.8rem;
+  display: inline-block;
+}
+
+.footer .license_container .footer_button .JPY_button:hover {
+  background: rgba(238, 238, 238, 0.6);
+}
