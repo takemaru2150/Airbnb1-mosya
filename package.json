@@ -20,7 +20,7 @@
     "buildw": "webpack --watch --config webpack.config.js"
   },
   "dependencies": {
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   },
   "repository": "https://github.com/takemaru2150/Airbnb1-.git",
   "author": "sakurai <takeshi2jp1000@gmail.com>"
